@@ -3,6 +3,25 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const handleCheckout = ()=>{
+    window.location = "/api/checkout";
+  }
+
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>FPX demo</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className={styles.main}>
+        <button onClick={ handleCheckout }>Checkout</button>
+      </main>
+    </div>
+  );
+}
+
+function HomeOld() {
   return (
     <div className={styles.container}>
       <Head>
